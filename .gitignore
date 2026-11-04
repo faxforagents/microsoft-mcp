@@ -1,0 +1,16 @@
+.coding-agent/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+secrets/
+credentials/
+reviewer-credentials*
+dist/
+*.zip
+.DS_Store
