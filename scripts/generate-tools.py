@@ -8,7 +8,7 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 ENDPOINT = "https://mcp.faxforagents.com/mcp"
-EXPECTED = set("get_guide get_fax_capabilities prepare_fax get_fax_document quote_fax send_approved_fax get_fax_status list_faxes get_fax_balance cancel_fax request_human_review get_review_status list_inbox read_inbound_fax extract_fax_data".split())
+EXPECTED = set("get_guide get_fax_capabilities prepare_fax get_fax_document quote_fax send_approved_fax get_fax_status list_faxes get_fax_balance cancel_fax request_card_payment get_card_payment_status request_human_review get_review_status list_inbox read_inbound_fax extract_fax_data".split())
 
 
 def fetch_tools():
@@ -69,13 +69,13 @@ def main():
         provenance = {"source": str(args.source), "sourceSha256": hashlib.sha256(raw).hexdigest(), "method": "local hosted-definition mirror"}
     else:
         tools, provenance = fetch_tools()
-    if len(tools) != 15 or {tool["name"] for tool in tools} != EXPECTED:
+    if len(tools) != 17 or {tool["name"] for tool in tools} != EXPECTED:
         raise RuntimeError("Tool inventory changed. Review before generating a package.")
     output = (json.dumps({"tools": tools}, indent=2, ensure_ascii=True) + "\n").encode()
     (ROOT / "mcptools.json").write_bytes(output)
     provenance["mcptoolsSha256"] = hashlib.sha256(output).hexdigest()
     (ROOT / "schemas/tools-source.json").write_text(json.dumps(provenance, indent=2) + "\n")
-    print("Generated mcptools.json with 15 unmodified tool definitions.")
+    print("Generated mcptools.json with 17 unmodified tool definitions.")
 
 
 if __name__ == "__main__":

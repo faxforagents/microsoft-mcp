@@ -15,7 +15,7 @@ import regex
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_URL = "https://developer.microsoft.com/json-schemas/teams/v1.30/MicrosoftTeams.schema.json"
-EXPECTED = set("get_guide get_fax_capabilities prepare_fax get_fax_document quote_fax send_approved_fax get_fax_status list_faxes get_fax_balance cancel_fax request_human_review get_review_status list_inbox read_inbound_fax extract_fax_data".split())
+EXPECTED = set("get_guide get_fax_capabilities prepare_fax get_fax_document quote_fax send_approved_fax get_fax_status list_faxes get_fax_balance cancel_fax request_card_payment get_card_payment_status request_human_review get_review_status list_inbox read_inbound_fax extract_fax_data".split())
 
 
 def require(condition, message):
@@ -91,7 +91,7 @@ def main():
         read_json(ROOT / filename)
     require(not re.search(r"Bearer\s+\S+|client_secret|access_token", auth["referenceId"], re.I), "Authorization reference must not contain a credential")
     tools = read_json(ROOT / "mcptools.json")["tools"]
-    require(len(tools) == 15 and {t["name"] for t in tools} == EXPECTED, "Unexpected tool inventory")
+    require(len(tools) == 17 and {t["name"] for t in tools} == EXPECTED, "Unexpected tool inventory")
     for tool in tools:
         require(bool(tool.get("description")), "Missing tool description")
         Draft202012Validator.check_schema(tool["inputSchema"])
@@ -125,7 +125,7 @@ def main():
     listing = "\n".join([*manifest["description"].values(), connectors[0]["description"], (ROOT / "intro.md").read_text()])
     require(not re.search(r"\b(?:price|prices|pricing|free|paid|prepaid|cost|costs)\b|\$\d", listing, re.I), "Listing copy contains pricing language")
     require(";" not in listing, "Listing copy contains a semicolon")
-    print("PASS: Microsoft v1.30 schema, 15 tool schemas, icons and eight review cases.")
+    print("PASS: Microsoft v1.30 schema, 17 tool schemas, icons and eight review cases.")
     blockers = []
     if not auth["referenceId"].strip():
         blockers.append("authorization.referenceId is unset. Register credentials outside the repository.")
