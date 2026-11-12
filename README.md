@@ -19,7 +19,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-MIT-1f6feb" alt="MIT licence"></a>
-  <a href="https://faxforagents.com/mcp/"><img src="https://img.shields.io/badge/MCP-15%20tools-6b4fbb" alt="15 MCP tools"></a>
+  <a href="https://faxforagents.com/mcp/"><img src="https://img.shields.io/badge/MCP-17%20tools-6b4fbb" alt="17 MCP tools"></a>
 </p>
 
 Fax for Agents is a fax API, a hosted MCP server and SDKs built so AI agents can send and receive faxes.
@@ -58,7 +58,7 @@ It currently fails for both reasons.
 | File | Purpose |
 |---|---|
 | [manifest.json](manifest.json) | Microsoft v1.30 app manifest with `agentConnectors` and `remoteMcpServer`. |
-| [mcptools.json](mcptools.json) | Fifteen tool definitions in a `tools` array. |
+| [mcptools.json](mcptools.json) | Seventeen tool definitions in a `tools` array. |
 | [intro.md](intro.md) | Public server documentation and limitations. |
 | [Color.png](Color.png) | 192x192 full color icon with the brand mark inside the 120x120 safe area. |
 | [Outline.png](Outline.png) | 32x32 white outline icon on a transparent background. |

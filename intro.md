@@ -29,6 +29,8 @@ A queued response does not confirm delivery.
 | `list_faxes` | List recent faxes. |
 | `get_fax_balance` | Read the account balance. |
 | `cancel_fax` | Request fax cancellation. |
+| `request_card_payment` | Ask a person to pay for one quoted fax by card. |
+| `get_card_payment_status` | Read a card payment order. |
 | `request_human_review` | Request human review. |
 | `get_review_status` | Read a review's status. |
 | `list_inbox` | List received faxes. |
