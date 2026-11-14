@@ -47,8 +47,6 @@ Microsoft acceptance of the declared API-key route remains unverified.
 
 ## Known issues and limitations
 
-The hosted definition currently names the document tool `get_document`, while this package uses the supplied mirror's `get_fax_document`.
-The deployment and package must agree before submission.
 The credential reference remains unset until the operator registers the Microsoft connection.
 Microsoft's certification guide requires Azure Key Vault configuration and says DCR and PKCE are unsupported.
 The operator must resolve this authentication difference before certification.

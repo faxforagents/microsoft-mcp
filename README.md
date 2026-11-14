@@ -85,11 +85,10 @@ This package declares that API-key route because it matches the existing server 
 Microsoft must confirm its acceptance for this certification intake and both target hosts.
 Do not infer acceptance from schema validation.
 
-The hosted server returned `get_document` on 2026-11-04.
-The supplied mirror contains `get_fax_document`, as requested for this package.
-Other hosted definitions also differ from the mirror.
 The generator used `../mcp/src/tool-definitions.json` without rewriting any tool definitions.
-Reconcile the deployment with the mirror and regenerate before submission.
+On 2026-11-14 the 17 definitions equal the `tools/list` of the hosted server at version 1.20.3.
+`send_approved_fax` and `cancel_fax` carry `destructiveHint` true.
+Regenerate before submission if the hosted server changes.
 
 No reviewer credentials or Microsoft tenant were available for functional testing.
 Every review scenario remains `not_run`.
