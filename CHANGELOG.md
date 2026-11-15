@@ -18,6 +18,10 @@ The description of `get_fax_capabilities` says that `me.scopes` is what the cred
 The description of `request_card_payment` says the card is held at payment, not authorized. It states the payment rule of API 1.20.9 too. A failed fax costs nothing, and a fax that stops part way costs the price of the pages that arrive.
 Nothing else in the 17 definitions changed since 1.20.6.
 
+`mcptools.json` was regenerated at hosted version 1.20.10 from `../mcp/src/tool-definitions.json` of faxforagents/mcp 0.5.6. It came out byte for byte the same.
+API 1.20.10 changed no name, title, description, input schema or annotation of the 17 tools. It changed the output schema of `quote_fax`, the guide and three answer texts, and the package carries none of them.
+The definitions equal the hosted `tools/list` of 2026-11-15 at version 1.20.10, output schemas aside.
+
 ## 0.1.0 (2026-11-04)
 
 Prepared the Microsoft remote MCP package with 15 tool definitions and eight review scenarios.
