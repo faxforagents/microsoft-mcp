@@ -19,6 +19,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/faxforagents/microsoft-mcp/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/faxforagents/microsoft-mcp/ci.yml?branch=main&label=ci" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-MIT-1f6feb" alt="MIT licence"></a>
   <a href="https://faxforagents.com/mcp/"><img src="https://img.shields.io/badge/MCP-17%20tools-6b4fbb" alt="17 MCP tools"></a>
 </p>
@@ -39,6 +40,8 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r scripts/requirements.txt
 PYTHON=.venv/bin/python sh scripts/validate.sh
 ```
+
+The [ci workflow](.github/workflows/ci.yml) runs this validation on every push to main and on each pull request.
 
 The validator checks the downloaded Microsoft v1.30 JSON schema, tool schemas, file references, icon dimensions and eight review scenarios.
 It also checks white outline pixels, transparency and the color icon's central 120x120 safe area.
