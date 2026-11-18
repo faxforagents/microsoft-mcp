@@ -89,9 +89,9 @@ Microsoft must confirm its acceptance for this certification intake and both tar
 Do not infer acceptance from schema validation.
 
 The generator used `../mcp/src/tool-definitions.json` without rewriting any tool definitions.
-On 2026-11-15 the 17 definitions equal the `tools/list` of the hosted server at version 1.20.10. The package leaves out the output schemas.
+On 2026-11-18 the 17 definitions equal the `tools/list` of the hosted server at version 1.21.12. The package leaves out the output schemas.
 Every input schema says `additionalProperties: false`.
-`send_approved_fax` and `cancel_fax` carry `destructiveHint` true.
+`send_approved_fax`, `cancel_fax` and `request_card_payment` carry `destructiveHint` true.
 Regenerate before submission if the hosted server changes.
 
 No reviewer credentials or Microsoft tenant were available for functional testing.
