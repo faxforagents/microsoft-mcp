@@ -1,6 +1,6 @@
 {
   "source": "../mcp/src/tool-definitions.json",
-  "sourceSha256": "ca4c529977e9dc2e105497a69a145d8b36df317c691b6304c0494d7c37555e61",
+  "sourceSha256": "27f8b36163c6b84bf7e25ba7da38914d1ff31fcd8eed2f5001acf413c8da4a88",
   "method": "local hosted-definition mirror",
-  "mcptoolsSha256": "a5d26da7dfa1ba233ee30f8662ea2bf5d9caa89ef0dba22c72c212608470256e"
+  "mcptoolsSha256": "2eb7efe9c7382f0312020273d3afc93950a718d9a788daf55c989f169d2e87b7"
 }

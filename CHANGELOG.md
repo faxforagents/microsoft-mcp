@@ -22,6 +22,12 @@ Nothing else in the 17 definitions changed since 1.20.6.
 API 1.20.10 changed no name, title, description, input schema or annotation of the 17 tools. It changed the output schema of `quote_fax`, the guide and three answer texts, and the package carries none of them.
 The definitions equal the hosted `tools/list` of 2026-11-15 at version 1.20.10, output schemas aside.
 
+`mcptools.json` was regenerated at hosted version 1.21.12 from `../mcp/src/tool-definitions.json` of faxforagents/mcp 0.5.8.
+`request_card_payment` now carries `destructiveHint` true. Once a person pays, the fax goes out and cannot be taken back.
+The description of `get_fax_capabilities` says it returns the credential's environment and scopes. It said account identity.
+API 1.21.11 and 1.21.12 also cut every tool's answer to an allow-list. The package carries no answers and no output schemas, so nothing else changed.
+The definitions equal the hosted `tools/list` of 2026-11-18 at version 1.21.12, output schemas aside.
+
 ## 0.1.0 (2026-11-04)
 
 Prepared the Microsoft remote MCP package with 15 tool definitions and eight review scenarios.
